@@ -10,7 +10,7 @@ function App() {
 
   React.useEffect(() => {
     const fetchData = () =>{
-     axios.get('http://127.0.0.1:8000/api/').then(r => setData(r.data) )
+     axios.get('http://127.0.0.1:8000').then(r => setData(r.data) )
     }
     fetchData()
   }, [])
