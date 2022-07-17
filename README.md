@@ -31,7 +31,7 @@
 8. Run the server:
 `python manage.py runserver`
 
-##### System Dependencies Backend:
+##### System Dependencies frontend:
 1. Inside the frontend folder write this up:
   `npm i`
   
