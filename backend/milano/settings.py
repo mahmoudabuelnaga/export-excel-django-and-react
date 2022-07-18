@@ -57,6 +57,15 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
+        'drf_excel.renderers.XLSXRenderer',
+    ),
+}
+
+
 ROOT_URLCONF = 'milano.urls'
 
 TEMPLATES = [
@@ -134,3 +143,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGOUT_REDIRECT_URL = '/'
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+DRF_EXCEL_DATETIME_FORMAT = 'mm-dd-yy h:mm AM/PM'
